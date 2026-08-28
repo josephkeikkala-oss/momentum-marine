@@ -232,22 +232,96 @@ h2 {
 /* ------------------------------
    CONTACT
 -------------------------------- */
+/* CONTACT */
 
 .contact {
-    background: #0b2942;
-    color: white;
+    background: #f4f4f4;
     padding: 100px 0;
 }
 
-.contact .section-label {
-    color: #aaa;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: start;
 }
 
-.contact p {
+.contact-intro h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 8px 0 25px;
+}
+
+.contact-intro p:not(.section-label) {
     font-size: 18px;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 450px;
 }
 
+.contact-form-wrap {
+    background: white;
+    padding: 40px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #b5b5b5;
+    background: #fff;
+    padding: 13px 14px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #0b2942;
+    outline-offset: 1px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-button {
+    display: inline-block;
+    border: 0;
+    background: #0b2942;
+    color: white;
+    padding: 15px 30px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    opacity: 0.9;
+}
 
 /* ------------------------------
    FOOTER
@@ -291,4 +365,17 @@ footer {
     .about-photo img {
         height: auto;
     }
+
+    .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.contact-form-wrap {
+    padding: 25px;
+}
+
+.form-row {
+    grid-template-columns: 1fr;
+}
 }
