@@ -1,0 +1,294 @@
+/* ------------------------------
+   BASIC SETUP
+-------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+.narrow {
+    max-width: 750px;
+}
+
+
+/* ------------------------------
+   HEADER
+-------------------------------- */
+
+header {
+    background: #0b2942;
+    color: white;
+    padding: 20px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 7px;
+    color: #b7b7b7;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    opacity: .65;
+}
+
+
+/* ------------------------------
+   HERO
+-------------------------------- */
+
+.hero {
+    min-height: 650px;
+
+    background:
+    linear-gradient(
+        rgba(0, 20, 35, 0.30),
+        rgba(0, 20, 35, 0.40)
+    ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.hero-content {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding-left: 0;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 85px);
+    line-height: .86;
+    margin: 15px 0 25px;
+    max-width: 400px;
+}
+
+.hero p:not(.eyebrow) {
+    font-size: 19px;
+    max-width: 150x;
+    margin-bottom: 35px;
+}
+
+
+/* ------------------------------
+   BUTTONS
+-------------------------------- */
+
+.button {
+    display: inline-block;
+    background: white;
+    color: #0b2942;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid white;
+}
+
+.button:hover {
+    background: white;
+    color: #0b2942;
+}
+
+
+/* ------------------------------
+   PRODUCT
+-------------------------------- */
+
+.product {
+    padding: 100px 0;
+}
+
+.section-label {
+    color: #777;
+}
+
+h2 {
+    font-size: 42px;
+    margin: 5px 0 20px;
+}
+
+.intro {
+    max-width: 650px;
+    font-size: 18px;
+}
+
+.specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 60px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.specs div {
+    padding: 30px 20px;
+    border-right: 1px solid #ccc;
+}
+
+.specs div:last-child {
+    border-right: none;
+}
+
+.specs strong {
+    display: block;
+    font-size: 26px;
+}
+
+.specs span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+
+/* ------------------------------
+   ABOUT
+-------------------------------- */
+
+.about {
+    background: #eeeeee;
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.about-text {
+    padding-right: 20px;
+}
+
+.about-text h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 8px 0 25px;
+}
+
+.about-text p:not(.section-label) {
+    font-size: 18px;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ------------------------------
+   CONTACT
+-------------------------------- */
+
+.contact {
+    background: #0b2942;
+    color: white;
+    padding: 100px 0;
+}
+
+.contact .section-label {
+    color: #aaa;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* ------------------------------
+   FOOTER
+-------------------------------- */
+
+footer {
+    background: #111;
+    color: #888;
+    padding: 30px 0;
+    font-size: 12px;
+}
+
+
+/* ------------------------------
+   PHONE / TABLET
+-------------------------------- */
+
+@media (max-width: 700px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .specs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .specs div {
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* About section on phones */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo img {
+        height: auto;
+    }
+}
